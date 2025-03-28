@@ -1,0 +1,34 @@
+{
+  "development": {
+    "username": "taskuser",
+    "password": "securepassword",
+    "database": "task_manager",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "dialect": "mysql",
+    "logging": false,
+    "define": {
+      "timestamps": true,
+      "underscored": true,
+      "paranoid": true
+    }
+  },
+  "test": {
+    "username": "taskuser",
+    "password": "securepassword",
+    "database": "task_manager",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "dialect": "mysql"
+  },
+  "production": {
+    "use_env_variable": "DATABASE_URL",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  }
+}
